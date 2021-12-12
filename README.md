@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+<h1 align="center">Hi 👋, I'm Denise Muniz</h1>
+<h3 align="center">A passionate creative, and curious, and dynamic person.</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# My Tasks - ToDo List App
 
-In the project directory, you can run:
+The easiest way to manage your tasks.
+This is a React project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### `yarn start`
+## Table of contentes
+ - [General info](#general-info)
+ - [Screenshots](#screenshots)
+ - [Technologies and Tools](#technologies-and-tools)
+ - [Setup](#setup)
+ - [Requirements](#requirements)
+ - [Contact](#contact)
+ - [Licence](#licence)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## General info
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  My Tasks as the name says is a ToDo list app to help people keep track of their tasks day-by-day. 
 
-### `yarn test`
+## Screenshots
+![Screenshot from 2021-12-12 21-03-27](https://user-images.githubusercontent.com/57671852/145728332-58f3b15b-c195-47d1-989f-d0f23376a9da.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Screenshot from 2021-12-12 21-03-47](https://user-images.githubusercontent.com/57671852/145728337-abace18f-3a20-4f00-9303-420e1b79555b.png)
 
-### `yarn build`
+![Screenshot from 2021-12-12 21-04-08](https://user-images.githubusercontent.com/57671852/145728338-094aaf0c-c860-4d07-aba1-1c167792c37a.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies / Tools
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ - react         - 17.0.2
+ - typescript    -  4.1.2
+ - types/react   - 17.0.0
+ - shortid       -  2.2.16
+ - types/shortid -  0.0.29
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `yarn eject`
+Instructions to run a local copy for development/test.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Instal `Nodejs` - version >12.*
+- Instal `yarn`
+- Install a proper IDE/Text editor for TypeScript. It's therefore recommended to use VS Code or any other TypeScript-friendly IDE.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Starting the development server
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To start the mock API - JSON server - run 
+```
+npx json-server --watch data/db.json --port 8000
+```
 
-## Learn More
+To start the frontend server from the directory of the project run 
+```
+yarn install
+``` 
+Then run the command below to start the application.
+```
+yarn start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Requirements
+
+- Create a to do containing a text of what to do.
+- View all to dos.
+- Mark a to do as "done" or "not done".
+- Filter to dos on "done", "not done" and/or contains a specific string.
+- Delete a to do.
+The API should be mocked on the FE.
+
+API spec:
+```
+POST /todos create a todo {"text": "Buy wheat", "done": False}
+GET /todos list all todos [{"id": 1, "text": "Buy wheat", "done": False}, {"id": 2. "text": "Make
+bread", "done": False}]
+PUT /todos/1 update a todo {"done": True}
+DELETE /todos/2
+```
+
+## Contact
+
+Denise Muniz - dendenmuniz@gmail.com
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
